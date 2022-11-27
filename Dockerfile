@@ -3,6 +3,7 @@
 FROM --platform=$BUILDPLATFORM public.ecr.aws/ubuntu/ubuntu:edge
 
 ENV YQ="4.29.2"
+ENV KUBECTL="1.25.3"
 
 # install packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
