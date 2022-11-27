@@ -13,7 +13,6 @@ This container comes pre-installed with below libraries
 1. nmap 
 1. openssh-client 
 1. tree 
-1. tzdata 
 1. vim-tiny 
 1. wget 
 1. kubectl

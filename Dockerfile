@@ -4,7 +4,6 @@ FROM --platform=$BUILDPLATFORM public.ecr.aws/ubuntu/ubuntu:edge
 
 # install packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-  tzdata \
   ca-certificates \
   curl \
   bind9-dnsutils \
