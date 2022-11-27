@@ -26,3 +26,6 @@ In order to run a pod with this container in your cluster:
 > kubectl -n default get pod
 
 > kubectl -n default exec -it pod/{pod name} -- bash
+
+Docker image URI is: 
+> public.ecr.aws/zinclabs/debug-ubuntu-base:latest
