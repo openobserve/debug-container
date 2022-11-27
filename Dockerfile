@@ -32,3 +32,5 @@ RUN if [ "$BUILDPLATFORM" = "linux/amd64" ]; then ARCHITECTURE=amd64; elif [ "$B
   wget https://github.com/mikefarah/yq/releases/download/v${YQ}/yq_linux_${ARCHITECTURE} -O /usr/local/bin/yq && \
   chmod +x /usr/local/bin/yq
 
+RUN echo export PS1="\e[0;32m[\u@\h \W]\$ \e[m " >> /root/.profile && echo export PS1="\e[0;32m[\u@\h \W]\$ \e[m " >> /root/.bashrc
+
