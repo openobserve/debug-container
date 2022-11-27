@@ -27,9 +27,7 @@ phases:
   build:
     commands:
       - docker buildx create --name mybuilder --use --bootstrap
-      - docker buildx build --push \
-        --platform linux/amd64,linux/arm64 \
-        --tag public.ecr.aws/zinclabs/debug-ubuntu-base:latest .
+      - docker buildx build --push --platform linux/amd64,linux/arm64 --tag public.ecr.aws/zinclabs/debug-ubuntu-base:latest .
 
 
 
