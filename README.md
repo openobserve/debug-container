@@ -1,8 +1,8 @@
 # A debug container
 
-This debug cinater can be used for debugging applications ain your kubernetes cluster.
+This debug container can be used for debugging applications in your kubernetes cluster.
 
-This continer comes preinstalled with many libraries
+This container comes pre-installed with below libraries
 
 1. ca-certificates 
 1. curl 
@@ -19,3 +19,11 @@ This continer comes preinstalled with many libraries
 1. kubectl
 1. yq
 
+
+In order to run a pod with this container in your cluster:
+
+> kubectl apply -f debugger.yaml
+
+> kubectl -n default get pod
+
+> kubectl -n default exec -it pod/{pod name} -- bash
