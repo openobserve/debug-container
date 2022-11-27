@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ubuntu-debug
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ubuntu-debug
+  template:
+    metadata:
+      labels:
+        app: ubuntu-debug
+    spec:
+      containers:
+        - name: ubuntu-debug
+          image: public.ecr.aws/zinclabs/debug-ubuntu-base:latest
+          imagePullPolicy: Always
+          command: ["sleep", "86400"]
+          resources: {}
+            # limits:
+            #   cpu: ".5"
+            #   memory: 1Gi
+
